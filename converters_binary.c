@@ -1,13 +1,9 @@
 #include "main.h"
 
-unsigned int convert_di(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_b(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_u(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_o(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_di(va_list args, buffer_t *output,unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_b(va_list args, buffer_t *output,unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_u(va_list args, buffer_t *output,unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_o(va_list args, buffer_t *output,unsigned char flags, int wid, int prec, unsigned char len);
 
 /**
  * convert_di - Converts an argument to a signed int and
@@ -21,8 +17,7 @@ unsigned int convert_o(va_list args, buffer_t *output,
  *
  * Return: The number of bytes stored to the buffer.
  */
-unsigned int convert_di(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len)
+unsigned int convert_di(va_list args, buffer_t *output,unsigned char flags, int wid, int prec, unsigned char len)
 {
 	long int d, copy;
 	unsigned int ret = 0, count = 0;
@@ -93,8 +88,7 @@ unsigned int convert_di(va_list args, buffer_t *output,
  *
  * Return: The number of bytes stored to the buffer.
  */
-unsigned int convert_b(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len)
+unsigned int convert_b(va_list args, buffer_t *output,unsigned char flags, int wid, int prec, unsigned char len)
 {
 	unsigned int num;
 
@@ -117,8 +111,7 @@ unsigned int convert_b(va_list args, buffer_t *output,
  *
  * Return: The number of bytes stored to the buffer.
  */
-unsigned int convert_o(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len)
+unsigned int convert_o(va_list args, buffer_t *output,unsigned char flags, int wid, int prec, unsigned char len)
 {
 	unsigned long int num;
 	unsigned int ret = 0;
@@ -155,8 +148,7 @@ unsigned int convert_o(va_list args, buffer_t *output,
  *
  * Return: The number of bytes stored to the buffer.
  */
-unsigned int convert_u(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len)
+unsigned int convert_u(va_list args, buffer_t *output,unsigned char flags, int wid, int prec, unsigned char len)
 {
 	unsigned long int num;
 	unsigned int ret = 0;
